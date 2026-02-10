@@ -6,33 +6,33 @@
 
 const carsData = [
     {
-        id: "BMW-X5-2022-001",
-        make: "BMW",
-        model: "X5 xDrive40i",
-        year: 2022,
-        price: 18500000,
+        id: "Toyota Fielder Hybrid ",
+        make: "Toyota",
+        model: "YOM",
+        year: 2019,
+        price: 1685000,
         mileage: "34,500 km",
         fuelType: "Petrol",
         transmission: "Automatic",
-        engine: "3000 cc",
+        engine: "1500 cc",
         power: "335 HP",
         torque: "450 Nm",
         doors: 5,
         seats: 5,
-        color: "Black Sapphire Metallic",
+        color: "ORIINAL FACTORY GRAY",
         location: "Nairobi",
-        images: ["bmwx5.jpg", "bmwx5.jpg", "bmwx5.jpg"],
-        description: "Immaculate 2022 BMW X5 xDrive40i with full service history. This luxury SUV comes with the M Sport package, panoramic sunroof, and advanced driver assistance systems. Perfect condition, one owner, never involved in any accident.",
-        features: ["Sunroof", "Leather Seats", "Navigation", "Camera", "Apple CarPlay", "Android Auto", "Heated Seats", "Ventilated Seats", "Premium Sound", "LED Headlights"],
-        contact: "07605455312",
-        brand: "BMW",
+        images: ["toyotafielderhybrid2019.jpg", "toyotafielderhybrid12019.jpg", "toyotafielderhybrid22019.jpg"],
+        description: "Immaculate 2022 BMW X5 xDrive40i with full service history. This luxury SUV comes with the M Sport package and advanced driver assistance systems. Perfect condition, one owner, never involved in any accident.",
+        features: [ "Leather Seats", "Navigation", "Camera", "Apple CarPlay", "Android Auto", "Heated Seats", "Ventilated Seats", "Premium Sound", "LED Headlights"],
+        contact: "0705455312",
+        brand: "TOYOTA",
         bodyType: "SUV",
         isFeatured: true,
         isHotDeal: false,
         isCertified: true,
         isFinancing: true,
-        createdAt: "2024-01-15",
-        updatedAt: "2024-02-10"
+        createdAt: "2026-01-15",
+        updatedAt: "2026-02-10"
     },
     {
         id: "BMW-M3-2023-001",
@@ -663,4 +663,5 @@ if (typeof module !== 'undefined' && module.exports) {
         filterCars,
         sortCars
     };
+
 }
