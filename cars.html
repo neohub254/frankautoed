@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Luxury Cars - AutoLuxe Kenya</title>
+    <meta name="description" content="Browse our collection of premium luxury cars in Kenya. Filter by brand, price, year, features and more. Find your dream car today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/cars.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/ui/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoLuxe</span>
+                <span class="logo-kenya">Kenya</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="cars.html" class="nav-link active">
+                    <i class="fas fa-car-side"></i>
+                    <span>Browse Cars</span>
+                </a>
+                <a href="videos.html" class="nav-link">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Video Hub</span>
+                </a>
+                <a href="contacts.html" class="nav-link">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn-primary btn-small" onclick="window.location.href='contacts.html'">
+                    <i class="fas fa-phone"></i>
+                    <span>Contact Us</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoLuxe</span>
+                <span class="logo-kenya">Kenya</span>
+            </span>
+            <button class="mobile-close-btn" id="mobileCloseBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="cars.html" class="mobile-nav-link active">
+                <i class="fas fa-car-side"></i>
+                <span>Browse Cars</span>
+            </a>
+            <a href="videos.html" class="mobile-nav-link">
+                <i class="fas fa-play-circle"></i>
+                <span>Video Hub</span>
+            </a>
+            <a href="contacts.html" class="mobile-nav-link">
+                <i class="fas fa-phone-alt"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+        <div class="mobile-nav-footer">
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+            <div class="mobile-contact-info">
+                <a href="tel:0705455312">
+                    <i class="fas fa-phone"></i>
+                    <span>0705455312</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Toggle Button for Mobile -->
+    <button class="filter-toggle-btn" id="filterToggleBtn">
+        <i class="fas fa-filter"></i>
+        <span>Filters</span>
+        <span class="filter-count" id="mobileFilterCount">0</span>
+    </button>
+
+    <!-- Brand Navigation Sidebar (Desktop) -->
+    <div class="brand-nav-sidebar" id="brandNavSidebar">
+        <div class="brand-nav-header">
+            <h3>Brands A-Z</h3>
+        </div>
+        <div class="brand-nav-list" id="brandNavList">
+            <!-- Brand letters will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <main class="cars-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Luxury Car Collection</h1>
+                <p>Browse our curated selection of premium vehicles</p>
+            </div>
+            
+            <div class="cars-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <div class="filters-header">
+                        <h3>Filters</h3>
+                        <button class="clear-filters" id="clearFilters">Clear All</button>
+                    </div>
+                    
+                    <!-- Search Filter -->
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h4>Search</h4>
+                        </div>
+                        <div class="search-filter">
+                            <div class="search-input-group">
+                                <input type="text" id="carSearch" placeholder="Search make, model, year...">
+                                <button class="search-clear" id="searchClear">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <button class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="search-suggestions" id="searchSuggestions"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Filter -->
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h4>Price Range (KES)</h4>
+                            <span id="priceRangeValue">500K - 50M</span>
+                        </div>
+                        <div class="price-filter">
+                            <div class="price-inputs">
+                                <input type="number" id="minPrice" placeholder="Min" min="500000" max="50000000" value="500000">
+                                <span>-</span>
+                                <input type="number" id="maxPrice" placeholder="Max" min="500000" max="50000000" value="50000000">
+                            </div>
+                            <div class="price-slider">
+                                <input type="range" id="priceSliderMin" min="500000" max="50000000" value="500000" step="500000">
+                                <input type="range" id="priceSliderMax" min="500000" max="50000000" value="50000000" step="500000">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Brand Filter -->
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h4>Brand</h4>
+                            <button class="filter-expand" data-target="brandFilter">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="filter-content" id="brandFilter">
+                            <div class="brand-filter-grid" id="brandFilterGrid">
+                                <!-- Brands will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Year Filter -->
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h4>Year</h4>
+                        </div>
+                        <div class="year-filter">
+                            <div class="year-inputs">
+                                <input type="number" id="minYear" placeholder="From" min="2010" max="2024" value="2010">
+                                <span>-</span>
+                                <input type="number" id="maxYear" placeholder="To" min="2010" max="2024" value="2024">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Transmission Filter -->
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h4>Transmission</h4>
+                        </div>
+                        <div class="checkbox-filter">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="transmission" value="Automatic" checked>
+                                <span class="checkmark"></span>
+                                <span>Automatic</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="transmission" value="Manual">
+                                <span class="checkmark"></span>
+                                <span>Manual</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="transmission" value="CVT">
+                                <span class="checkmark"></span>
+                                <span>CVT</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="transmission" value="Semi-Auto">
+                                <span class="checkmark"></span>
+                                <span>Semi-Auto</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Fuel Type Filter -->
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h4>Fuel Type</h4>
+                        </div>
+                        <div class="checkbox-filter">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="fuelType" value="Petrol" checked>
+                                <span class="checkmark"></span>
+                                <span>Petrol</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="fuelType" value="Diesel" checked>
+                                <span class="checkmark"></span>
+                                <span>Diesel</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="fuelType" value="Electric">
+                                <span class="checkmark"></span>
+                                <span>Electric</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="fuelType" value="Hybrid">
+                                <span class="checkmark"></span>
+                                <span>Hybrid</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="fuelType" value="LPG">
+                                <span class="checkmark"></span>
+                                <span>LPG</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Body Type Filter -->
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h4>Body Type</h4>
+                        </div>
+                        <div class="checkbox-filter">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="bodyType" value="SUV" checked>
+                                <span class="checkmark"></span>
+                                <span>SUV</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="bodyType" value="Sedan" checked>
+                                <span class="checkmark"></span>
+                                <span>Sedan</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="bodyType" value="Hatchback">
+                                <span class="checkmark"></span>
+                                <span>Hatchback</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="bodyType" value="Truck">
+                                <span class="checkmark"></span>
+                                <span>Truck</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="bodyType" value="Convertible">
+                                <span class="checkmark"></span>
+                                <span>Convertible</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Features Filter -->
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h4>Features</h4>
+                            <button class="filter-expand" data-target="featuresFilter">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="filter-content" id="featuresFilter">
+                            <div class="checkbox-filter">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="features" value="Sunroof">
+                                    <span class="checkmark"></span>
+                                    <span>Sunroof</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="features" value="Leather Seats">
+                                    <span class="checkmark"></span>
+                                    <span>Leather Seats</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="features" value="Navigation">
+                                    <span class="checkmark"></span>
+                                    <span>Navigation</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="features" value="Camera">
+                                    <span class="checkmark"></span>
+                                    <span>Camera</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="features" value="Apple CarPlay">
+                                    <span class="checkmark"></span>
+                                    <span>Apple CarPlay</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="features" value="Android Auto">
+                                    <span class="checkmark"></span>
+                                    <span>Android Auto</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="features" value="Heated Seats">
+                                    <span class="checkmark"></span>
+                                    <span>Heated Seats</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="features" value="Ventilated Seats">
+                                    <span class="checkmark"></span>
+                                    <span>Ventilated Seats</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Location Filter -->
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h4>Location</h4>
+                        </div>
+                        <select class="location-select" id="locationFilter">
+                            <option value="all">All Locations</option>
+                            <option value="Nairobi">Nairobi</option>
+                            <option value="Mombasa">Mombasa</option>
+                            <option value="Kisumu">Kisumu</option>
+                            <option value="Eldoret">Eldoret</option>
+                            <option value="Nakuru">Nakuru</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Sort Options -->
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h4>Sort By</h4>
+                        </div>
+                        <select class="sort-select" id="sortFilter">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="year-new">Year: Newest First</option>
+                            <option value="year-old">Year: Oldest First</option>
+                            <option value="mileage-low">Mileage: Low to High</option>
+                        </select>
+                    </div>
+                    
+                    <button class="apply-filters btn-primary" id="applyFilters">
+                        Apply Filters
+                    </button>
+                </aside>
+                
+                <!-- Main Content Area -->
+                <div class="main-content">
+                    <!-- Results Header -->
+                    <div class="results-header">
+                        <div class="results-info">
+                            <h2 id="resultsCount">Loading cars...</h2>
+                            <div class="active-filters" id="activeFilters">
+                                <!-- Active filter tags will appear here -->
+                            </div>
+                        </div>
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Empty State -->
+                    <div class="empty-state" id="emptyState" style="display: none;">
+                        <i class="fas fa-car-crash"></i>
+                        <h3>No Cars Found</h3>
+                        <p>Try adjusting your filters or search terms</p>
+                        <button class="btn-secondary" id="resetFiltersBtn">
+                            Reset All Filters
+                        </button>
+                    </div>
+                    
+                    <!-- Cars Grid -->
+                    <div class="cars-grid grid-view" id="carsGrid">
+                        <!-- Cars will be populated by JavaScript -->
+                        <div class="loading-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <span>Loading cars...</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Brand Sections (for navigation) -->
+                    <div class="brand-sections" id="brandSections">
+                        <!-- Brand sections will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-car"></i>
+                        <span>AutoLuxe</span>
+                        <span class="logo-kenya">Kenya</span>
+                    </div>
+                    <p class="footer-description">
+                        Kenya's premier marketplace for luxury and premium vehicles. Quality, trust, and excellence since 2019.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Browse Cars</a></li>
+                        <li><a href="videos.html">Video Hub</a></li>
+                        <li><a href="contacts.html">Contact Us</a></li>
+                        <li><a href="#">Sell Your Car</a></li>
+                        <li><a href="#">Financing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Popular Brands</h3>
+                    <ul class="footer-links">
+                        <li><a href="cars.html?brand=toyota">Toyota</a></li>
+                        <li><a href="cars.html?brand=mercedes">Mercedes-Benz</a></li>
+                        <li><a href="cars.html?brand=bmw">BMW</a></li>
+                        <li><a href="cars.html?brand=audi">Audi</a></li>
+                        <li><a href="cars.html?brand=range rover">Range Rover</a></li>
+                        <li><a href="cars.html?brand=porsche">Porsche</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0705455312</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@autoluxe.co.ke</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoLuxe Kenya. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2547605455312?text=Hello%20AutoLuxe%20Kenya!%20I'm%20interested%20in%20viewing%20cars%20on%20your%20website." 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Car Modal (Will be populated by JavaScript) -->
+    <div class="modal-overlay" id="carModalOverlay">
+        <div class="modal-container" id="carModal">
+            <!-- Modal content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/data/carsData.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/cars.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initMobileMenu();
+            initCarFilters();
+            initSearch();
+            loadCarsData();
+            initBrandNavigation();
+        });
+    </script>
+</body>
+</html>

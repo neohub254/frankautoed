@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLuxe Kenya - Premium Vehicle Marketplace</title>
+    <meta name="description" content="Find your dream luxury car in Kenya. Browse premium vehicles from BMW, Mercedes, Toyota, Audi, Porsche and more. Best prices, certified vehicles.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/ui/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoLuxe</span>
+                <span class="logo-kenya">Kenya</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="cars.html" class="nav-link">
+                    <i class="fas fa-car-side"></i>
+                    <span>Browse Cars</span>
+                </a>
+                <a href="videos.html" class="nav-link">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Video Hub</span>
+                </a>
+                <a href="contacts.html" class="nav-link">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="cars.html" class="btn-primary btn-small">
+                    <i class="fas fa-search"></i>
+                    <span>Find Car</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoLuxe</span>
+                <span class="logo-kenya">Kenya</span>
+            </span>
+            <button class="mobile-close-btn" id="mobileCloseBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="cars.html" class="mobile-nav-link">
+                <i class="fas fa-car-side"></i>
+                <span>Browse Cars</span>
+            </a>
+            <a href="videos.html" class="mobile-nav-link">
+                <i class="fas fa-play-circle"></i>
+                <span>Video Hub</span>
+            </a>
+            <a href="contacts.html" class="mobile-nav-link">
+                <i class="fas fa-phone-alt"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+        <div class="mobile-nav-footer">
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+            <div class="mobile-contact-info">
+                <a href="tel:0705455312">
+                    <i class="fas fa-phone"></i>
+                    <span>0705455312</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Find Your Dream Car in Kenya</h1>
+            <p class="hero-subtitle">Premium vehicles from trusted dealers. Luxury, performance, and reliability.</p>
+            
+            <div class="quick-search">
+                <input type="text" id="quickSearch" placeholder="Search for make, model, or year...">
+                <button class="btn-primary">
+                    <i class="fas fa-search"></i>
+                    <span>Browse Inventory</span>
+                </button>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="500">0</span>
+                    <span class="stat-label">Cars Sold</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="100">0</span>
+                    <span class="stat-label">Brands</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section class="featured-cars">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Luxury Cars</h2>
+                <p>Curated selection of premium vehicles</p>
+            </div>
+            
+            <div class="featured-cars-grid" id="featuredCars">
+                <!-- Featured cars will be loaded from JavaScript -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span>Loading featured cars...</span>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="cars.html" class="btn-secondary">
+                    <span>View All Cars</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Showcase -->
+    <section class="brand-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>Premium Brands</h2>
+                <p>Explore vehicles from world-class manufacturers</p>
+            </div>
+            
+            <div class="brands-grid" id="brandsGrid">
+                <!-- Brands will be loaded from JavaScript -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span>Loading brands...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Certified Vehicles</h3>
+                    <p>Every car undergoes 150-point inspection</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Warranty Included</h3>
+                    <p>12-month warranty on all vehicles</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Financing Available</h3>
+                    <p>Flexible payment plans for all budgets</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Nationwide Delivery</h3>
+                    <p>Free delivery within Nairobi, Mombasa, Kisumu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customer Reviews</h2>
+                <p>What our clients say about us</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="slider-container" id="testimonialsSlider">
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Bought my dream Mercedes from AutoLuxe. The process was smooth and transparent. Highly recommended!"
+                        </p>
+                        <div class="customer-info">
+                            <div class="customer-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h4>James Mwangi</h4>
+                                <p>Nairobi</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Excellent service! Found a perfect BMW X5 within my budget. Financing was approved in 24 hours."
+                        </p>
+                        <div class="customer-info">
+                            <div class="customer-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h4>Sarah Omondi</h4>
+                                <p>Mombasa</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "AutoLuxe helped me find a reliable Toyota Land Cruiser for my safari business. Professional team!"
+                        </p>
+                        <div class="customer-info">
+                            <div class="customer-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h4>David Kimani</h4>
+                                <p>Kisumu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="slider-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Get notified about new arrivals, price drops, and special offers</p>
+                
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group">
+                        <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                        <button type="submit" class="btn-primary">
+                            <span>Subscribe</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="notifyNewArrivals" checked>
+                        <label for="notifyNewArrivals">Notify me about new arrivals and special deals</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-car"></i>
+                        <span>AutoLuxe</span>
+                        <span class="logo-kenya">Kenya</span>
+                    </div>
+                    <p class="footer-description">
+                        Kenya's premier marketplace for luxury and premium vehicles. Quality, trust, and excellence since 2019.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Browse Cars</a></li>
+                        <li><a href="videos.html">Video Hub</a></li>
+                        <li><a href="contacts.html">Contact Us</a></li>
+                        <li><a href="#">Sell Your Car</a></li>
+                        <li><a href="#">Financing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Popular Brands</h3>
+                    <ul class="footer-links">
+                        <li><a href="cars.html?brand=toyota">Toyota</a></li>
+                        <li><a href="cars.html?brand=mercedes">Mercedes-Benz</a></li>
+                        <li><a href="cars.html?brand=bmw">BMW</a></li>
+                        <li><a href="cars.html?brand=audi">Audi</a></li>
+                        <li><a href="cars.html?brand=range rover">Range Rover</a></li>
+                        <li><a href="cars.html?brand=porsche">Porsche</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0705455312</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@autoluxe.co.ke</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoLuxe Kenya. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2547605455312?text=Hello%20AutoLuxe%20Kenya!%20I'm%20interested%20in%20viewing%20cars%20on%20your%20website." 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Car Modal (Will be populated by JavaScript) -->
+    <div class="modal-overlay" id="carModalOverlay">
+        <div class="modal-container" id="carModal">
+            <!-- Modal content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/data/carsData.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initMobileMenu();
+            initTestimonialsSlider();
+            initNewsletterForm();
+            initStatsCounter();
+        });
+    </script>
+</body>
+</html>

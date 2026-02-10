@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Videos & Reviews - AutoLuxe Kenya</title>
+    <meta name="description" content="Watch car walkarounds, test drives, reviews and maintenance videos. Submit your own car videos to be featured.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/videos.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/ui/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoLuxe</span>
+                <span class="logo-kenya">Kenya</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="cars.html" class="nav-link">
+                    <i class="fas fa-car-side"></i>
+                    <span>Browse Cars</span>
+                </a>
+                <a href="videos.html" class="nav-link active">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Video Hub</span>
+                </a>
+                <a href="contacts.html" class="nav-link">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn-primary btn-small" onclick="window.location.href='contacts.html'">
+                    <i class="fas fa-video"></i>
+                    <span>Submit Video</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoLuxe</span>
+                <span class="logo-kenya">Kenya</span>
+            </span>
+            <button class="mobile-close-btn" id="mobileCloseBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="cars.html" class="mobile-nav-link">
+                <i class="fas fa-car-side"></i>
+                <span>Browse Cars</span>
+            </a>
+            <a href="videos.html" class="mobile-nav-link active">
+                <i class="fas fa-play-circle"></i>
+                <span>Video Hub</span>
+            </a>
+            <a href="contacts.html" class="mobile-nav-link">
+                <i class="fas fa-phone-alt"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+        <div class="mobile-nav-footer">
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+            <div class="mobile-contact-info">
+                <a href="tel:0705455312">
+                    <i class="fas fa-phone"></i>
+                    <span>0705455312</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Hub Header -->
+    <section class="video-hero">
+        <div class="container">
+            <div class="video-hero-content">
+                <h1>AutoLuxe Video Hub</h1>
+                <p>Watch walkarounds, test drives, reviews, and maintenance tips for luxury vehicles</p>
+                <button class="btn-primary" id="openVideoForm">
+                    <i class="fas fa-upload"></i>
+                    <span>Submit Your Video</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Categories -->
+    <section class="video-categories">
+        <div class="container">
+            <div class="categories-tabs" id="categoriesTabs">
+                <button class="category-tab active" data-category="all">
+                    <i class="fas fa-th"></i>
+                    <span>All Videos</span>
+                </button>
+                <button class="category-tab" data-category="walkaround">
+                    <i class="fas fa-walking"></i>
+                    <span>Walkarounds</span>
+                </button>
+                <button class="category-tab" data-category="test-drive">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Test Drives</span>
+                </button>
+                <button class="category-tab" data-category="review">
+                    <i class="fas fa-star"></i>
+                    <span>Reviews</span>
+                </button>
+                <button class="category-tab" data-category="maintenance">
+                    <i class="fas fa-tools"></i>
+                    <span>Maintenance</span>
+                </button>
+                <button class="category-tab" data-category="news">
+                    <i class="fas fa-newspaper"></i>
+                    <span>News</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Grid -->
+    <section class="videos-section">
+        <div class="container">
+            <div class="videos-header">
+                <h2>Featured Videos</h2>
+                <div class="sort-videos">
+                    <select id="sortVideos">
+                        <option value="latest">Latest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="duration">Shortest First</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="videos-grid" id="videosGrid">
+                <!-- Videos will be loaded from JavaScript -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span>Loading videos...</span>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button class="btn-secondary" id="loadMoreVideos">
+                    <i class="fas fa-plus"></i>
+                    <span>Load More Videos</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Submission Form -->
+    <section class="video-submission" id="videoSubmission">
+        <div class="container">
+            <div class="section-header">
+                <h2>Submit Your Car Video</h2>
+                <p>Share your luxury car video and get featured on our platform</p>
+            </div>
+            
+            <form class="video-form" id="videoForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="videoTitle">Video Title *</label>
+                        <input type="text" id="videoTitle" placeholder="e.g., 2022 BMW X5 Walkaround" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="videoCategory">Category *</label>
+                        <select id="videoCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="walkaround">Walkaround</option>
+                            <option value="test-drive">Test Drive</option>
+                            <option value="review">Review</option>
+                            <option value="maintenance">Maintenance</option>
+                            <option value="news">News</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="videoDescription">Description *</label>
+                    <textarea id="videoDescription" rows="4" placeholder="Describe your video content..." required></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="videoLink">YouTube/Vimeo Link *</label>
+                        <input type="url" id="videoLink" placeholder="https://youtube.com/watch?v=..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="carModel">Car Model</label>
+                        <input type="text" id="carModel" placeholder="e.g., BMW X5 2022">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="uploaderName">Your Name *</label>
+                        <input type="text" id="uploaderName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="uploaderEmail">Email *</label>
+                        <input type="email" id="uploaderEmail" placeholder="john@example.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="videoTags">Tags (comma separated)</label>
+                    <input type="text" id="videoTags" placeholder="BMW, X5, SUV, luxury">
+                </div>
+                
+                <div class="form-check">
+                    <input type="checkbox" id="agreeTerms" required>
+                    <label for="agreeTerms">I agree to the terms and conditions and confirm I own the rights to this video</label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Submit Video</span>
+                    </button>
+                    <button type="button" class="btn-secondary" id="closeVideoForm">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-car"></i>
+                        <span>AutoLuxe</span>
+                        <span class="logo-kenya">Kenya</span>
+                    </div>
+                    <p class="footer-description">
+                        Kenya's premier marketplace for luxury and premium vehicles. Quality, trust, and excellence since 2019.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Browse Cars</a></li>
+                        <li><a href="videos.html">Video Hub</a></li>
+                        <li><a href="contacts.html">Contact Us</a></li>
+                        <li><a href="#">Sell Your Car</a></li>
+                        <li><a href="#">Financing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Popular Brands</h3>
+                    <ul class="footer-links">
+                        <li><a href="cars.html?brand=toyota">Toyota</a></li>
+                        <li><a href="cars.html?brand=mercedes">Mercedes-Benz</a></li>
+                        <li><a href="cars.html?brand=bmw">BMW</a></li>
+                        <li><a href="cars.html?brand=audi">Audi</a></li>
+                        <li><a href="cars.html?brand=range rover">Range Rover</a></li>
+                        <li><a href="cars.html?brand=porsche">Porsche</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0705455312</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@autoluxe.co.ke</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoLuxe Kenya. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal (Will be populated by JavaScript) -->
+    <div class="modal-overlay" id="videoModalOverlay">
+        <div class="modal-container video-modal" id="videoModal">
+            <!-- Video modal content will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2547605455312?text=Hello%20AutoLuxe%20Kenya!%20I'm%20interested%20in%20your%20video%20hub." 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Files -->
+    <script src="js/data/videosData.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/videos.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initMobileMenu();
+            initVideoCategories();
+            loadVideosData();
+            initVideoSubmissionForm();
+        });
+    </script>
+</body>
+</html>

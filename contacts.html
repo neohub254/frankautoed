@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AutoLuxe Kenya</title>
+    <meta name="description" content="Contact AutoLuxe Kenya for luxury car inquiries, test drives, financing options and dealership information. We're here to help you find your dream car.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/ui/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoLuxe</span>
+                <span class="logo-kenya">Kenya</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="cars.html" class="nav-link">
+                    <i class="fas fa-car-side"></i>
+                    <span>Browse Cars</span>
+                </a>
+                <a href="videos.html" class="nav-link">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Video Hub</span>
+                </a>
+                <a href="contacts.html" class="nav-link active">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="tel:0705455312" class="btn-primary btn-small">
+                    <i class="fas fa-phone"></i>
+                    <span>Call Now</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span class="logo">
+                <i class="fas fa-car"></i>
+                <span>AutoLuxe</span>
+                <span class="logo-kenya">Kenya</span>
+            </span>
+            <button class="mobile-close-btn" id="mobileCloseBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="cars.html" class="mobile-nav-link">
+                <i class="fas fa-car-side"></i>
+                <span>Browse Cars</span>
+            </a>
+            <a href="videos.html" class="mobile-nav-link">
+                <i class="fas fa-play-circle"></i>
+                <span>Video Hub</span>
+            </a>
+            <a href="contacts.html" class="mobile-nav-link active">
+                <i class="fas fa-phone-alt"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+        <div class="mobile-nav-footer">
+            <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+            <div class="mobile-contact-info">
+                <a href="tel:0705455312">
+                    <i class="fas fa-phone"></i>
+                    <span>0705455312</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Header -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Get In Touch</h1>
+                <p>Contact us for luxury car inquiries, test drives, and financing options</p>
+                <div class="contact-hero-stats">
+                    <div class="hero-stat">
+                        <i class="fas fa-phone-volume"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                    <div class="hero-stat">
+                        <i class="fas fa-clock"></i>
+                        <span>Quick Response</span>
+                    </div>
+                    <div class="hero-stat">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Trusted Service</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Main Section -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Direct Contact Column -->
+                <div class="contact-column direct-contact">
+                    <div class="contact-card">
+                        <h2><i class="fas fa-address-card"></i> Direct Contact</h2>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h3>Phone Number</h3>
+                                <p>0705455312</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-actions">
+                            <a href="tel:0705455312" class="contact-action-btn call-btn">
+                                <i class="fas fa-phone"></i>
+                                <span>Call Now</span>
+                            </a>
+                            <a href="https://wa.me/2547605455312?text=Hello%20AutoLuxe%20Kenya!%20I%20would%20like%20to%20inquire%20about%20your%20luxury%20cars." 
+                               class="contact-action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <button class="contact-action-btn sms-btn" id="smsBtn">
+                                <i class="fas fa-sms"></i>
+                                <span>SMS</span>
+                            </button>
+                            <a href="mailto:info@autoluxe.co.ke" class="contact-action-btn email-btn">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                        </div>
+                        
+                        <div class="quick-contact">
+                            <h3>Quick Inquiries</h3>
+                            <div class="quick-buttons">
+                                <button class="quick-btn" data-message="I'm interested in scheduling a test drive">
+                                    <i class="fas fa-car"></i>
+                                    <span>Test Drive</span>
+                                </button>
+                                <button class="quick-btn" data-message="I need information about financing options">
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                    <span>Financing</span>
+                                </button>
+                                <button class="quick-btn" data-message="I want to sell my luxury car">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>Sell My Car</span>
+                                </button>
+                                <button class="quick-btn" data-message="I have questions about vehicle warranties">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Warranty</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="emergency-contact">
+                            <h3><i class="fas fa-exclamation-circle"></i> After Hours</h3>
+                            <p>For urgent inquiries outside business hours, call or WhatsApp the same number.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form Column -->
+                <div class="contact-column contact-form-col">
+                    <div class="contact-card">
+                        <h2><i class="fas fa-paper-plane"></i> Send Message</h2>
+                        <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName">Full Name *</label>
+                                <input type="text" id="contactName" placeholder="John Doe" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactPhone">Phone Number *</label>
+                                    <input type="tel" id="contactPhone" placeholder="0705455312" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactEmail">Email Address *</label>
+                                    <input type="email" id="contactEmail" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="carSelection">Car of Interest</label>
+                                <select id="carSelection">
+                                    <option value="">Select a car (optional)</option>
+                                    <!-- Cars will be populated from JavaScript -->
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="messageType">Message Type *</label>
+                                <select id="messageType" required>
+                                    <option value="">Select type</option>
+                                    <option value="inquiry">General Inquiry</option>
+                                    <option value="test-drive">Test Drive Request</option>
+                                    <option value="financing">Financing Inquiry</option>
+                                    <option value="maintenance">Maintenance Service</option>
+                                    <option value="sell">Sell My Car</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactMessage">Message *</label>
+                                <textarea id="contactMessage" rows="5" placeholder="Please describe your inquiry in detail..." required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="fileUpload">Attach Files (Optional)</label>
+                                <div class="file-upload">
+                                    <input type="file" id="fileUpload" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                                    <label for="fileUpload" class="file-upload-label">
+                                        <i class="fas fa-upload"></i>
+                                        <span>Choose File</span>
+                                    </label>
+                                    <span class="file-name" id="fileName">No file chosen</span>
+                                </div>
+                                <small>Max file size: 5MB. Allowed: PDF, JPG, PNG, DOC</small>
+                            </div>
+                            
+                            <div class="form-group captcha-group">
+                                <div class="captcha">
+                                    <span id="captchaText">5 + 3 = ?</span>
+                                    <input type="text" id="captchaInput" placeholder="Enter answer" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-check">
+                                <input type="checkbox" id="contactAgree" required>
+                                <label for="contactAgree">I agree to the privacy policy and terms of service</label>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Dealership Info Column -->
+                <div class="contact-column dealership-info">
+                    <div class="contact-card">
+                        <h2><i class="fas fa-map-marker-alt"></i> Dealership Info</h2>
+                        
+                        <div class="map-container">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map"></i>
+                                <p>Google Maps Integration</p>
+                                <small>Map would show location here</small>
+                            </div>
+                        </div>
+                        
+                        <div class="dealership-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-pin"></i>
+                                <div>
+                                    <h3>Address</h3>
+                                    <p>AutoLuxe Kenya Headquarters<br>
+                                    Nairobi, Kenya</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h3>Business Hours</h3>
+                                    <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
+                                    Saturday: 9:00 AM - 4:00 PM<br>
+                                    Sunday: 10:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h3>Sales Team</h3>
+                                    <p>Available during business hours<br>
+                                    Extended hours by appointment</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <i class="fas fa-concierge-bell"></i>
+                                <div>
+                                    <h3>Services</h3>
+                                    <p>• Test Drives<br>
+                                    • Financing Consultation<br>
+                                    • Trade-in Evaluation<br>
+                                    • Vehicle Delivery</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-section">
+                            <h3>Follow Us</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="live-chat">
+                            <h3><i class="fas fa-comments"></i> Live Chat</h3>
+                            <p>Chat with our sales team during business hours</p>
+                            <button class="btn-secondary chat-btn" id="liveChatBtn">
+                                <i class="fas fa-comment-dots"></i>
+                                <span>Start Chat</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What documents do I need to buy a car?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll need a valid ID, proof of address, and if financing, proof of income. For international buyers, passport and work permit may be required.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer test drives?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, test drives are available by appointment. Contact us to schedule a test drive for any vehicle in our inventory.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What financing options are available?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer various financing options through our partner banks including installment plans, lease options, and balloon payment plans.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you deliver vehicles nationwide?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we deliver to all major cities in Kenya. Delivery within Nairobi is free, while other locations have a delivery fee based on distance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What warranty comes with the cars?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All our vehicles come with a 12-month comprehensive warranty. Extended warranty options are also available.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I trade in my current vehicle?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we accept trade-ins. Contact us for a free valuation of your current vehicle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Sales Team</h2>
+                <p>Meet the experts ready to assist you</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Michael Kariuki</h3>
+                    <p class="member-title">Senior Sales Consultant</p>
+                    <p class="member-contact">Mobile: 0712345678</p>
+                    <p class="member-specialty">Specializes in: Luxury SUVs</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Sarah Mwende</h3>
+                    <p class="member-title">Sales Manager</p>
+                    <p class="member-contact">Mobile: 0723456789</p>
+                    <p class="member-specialty">Specializes in: German Luxury</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>David Ochieng</h3>
+                    <p class="member-title">Financing Specialist</p>
+                    <p class="member-contact">Mobile: 0734567890</p>
+                    <p class="member-specialty">Specializes in: Loan & Lease Options</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-car"></i>
+                        <span>AutoLuxe</span>
+                        <span class="logo-kenya">Kenya</span>
+                    </div>
+                    <p class="footer-description">
+                        Kenya's premier marketplace for luxury and premium vehicles. Quality, trust, and excellence since 2019.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cars.html">Browse Cars</a></li>
+                        <li><a href="videos.html">Video Hub</a></li>
+                        <li><a href="contacts.html">Contact Us</a></li>
+                        <li><a href="#">Sell Your Car</a></li>
+                        <li><a href="#">Financing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Popular Brands</h3>
+                    <ul class="footer-links">
+                        <li><a href="cars.html?brand=toyota">Toyota</a></li>
+                        <li><a href="cars.html?brand=mercedes">Mercedes-Benz</a></li>
+                        <li><a href="cars.html?brand=bmw">BMW</a></li>
+                        <li><a href="cars.html?brand=audi">Audi</a></li>
+                        <li><a href="cars.html?brand=range rover">Range Rover</a></li>
+                        <li><a href="cars.html?brand=porsche">Porsche</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0705455312</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@autoluxe.co.ke</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoLuxe Kenya. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2547605455312?text=Hello%20AutoLuxe%20Kenya!%20I%20have%20a%20question%20about%20your%20services." 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SMS Modal -->
+    <div class="modal-overlay" id="smsModalOverlay">
+        <div class="modal-container sms-modal">
+            <div class="modal-header">
+                <h2>Send SMS Message</h2>
+                <button class="modal-close" id="smsModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Click the button below to open your SMS app with a pre-filled message:</p>
+                <div class="sms-preview">
+                    <p id="smsPreview">INQUIRY: I'm interested in vehicles from AutoLuxe Kenya. Please contact me.</p>
+                </div>
+                <a href="sms:0705455312?body=INQUIRY%3A%20I%27m%20interested%20in%20vehicles%20from%20AutoLuxe%20Kenya.%20Please%20contact%20me." 
+                   class="btn-primary send-sms-btn">
+                    <i class="fas fa-sms"></i>
+                    <span>Open SMS App</span>
+                </a>
+                <div class="sms-templates">
+                    <h4>Quick Templates:</h4>
+                    <div class="template-buttons">
+                        <button class="template-btn" data-template="test-drive">Test Drive Request</button>
+                        <button class="template-btn" data-template="pricing">Pricing Inquiry</button>
+                        <button class="template-btn" data-template="appointment">Schedule Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Chat Modal -->
+    <div class="modal-overlay" id="chatModalOverlay">
+        <div class="modal-container chat-modal">
+            <div class="modal-header">
+                <h2>Live Chat Support</h2>
+                <button class="modal-close" id="chatModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="chat-status">
+                    <div class="status-indicator online"></div>
+                    <span>Sales team is currently online</span>
+                </div>
+                <div class="chat-messages">
+                    <div class="message agent">
+                        <p>Hello! Welcome to AutoLuxe Kenya. How can I assist you today?</p>
+                        <span class="time">10:00 AM</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message..." id="chatInput">
+                    <button class="send-chat-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="chat-hours">
+                    <p><i class="fas fa-clock"></i> Live chat available Mon-Sat: 9AM-6PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/data/carsData.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/contacts.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initMobileMenu();
+            initContactForm();
+            initSMSModal();
+            initLiveChat();
+            initFAQAccordion();
+            populateCarDropdown();
+        });
+    </script>
+</body>
+</html>
